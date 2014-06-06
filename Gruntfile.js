@@ -11,13 +11,48 @@ module.exports = function(grunt) {
         src: 'library/js/scripts.js',
         dest: 'library/js/scripts.min.js'
       }
+    },
+
+    cmq: {
+      options: {
+        log: false
+      },
+      your_target: {
+        files: {
+          'library/css/tmp': ['library/css/*.css']
+        }
+      }
+    },
+
+    compass: {
+      dist: {
+        options: {
+          cssDir: 'library/css',
+          sassDir: 'library/scss',
+          imagesDir: 'library/images',
+          javascriptsDir: 'library/js',
+          environment: 'development',
+          relativeAssets: true,
+          outputStyle: 'expanded',
+          raw: 'preferred_syntax = :scss\n'
+        }
+      }
+    },
+           
+    jshint: {
+      all: ['Gruntfile.js', 'library/js/**/*.js']
     }
+
+
   });
 
-  // Load the plugin that provides the "uglify" task.
+  // Load the plugins
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-combine-media-queries');
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['uglify'], 'compass','cmq', 'jshint');
 
 };

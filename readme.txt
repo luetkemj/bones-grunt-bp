@@ -1,4 +1,13 @@
 /******************************************************************
+Bones Grunt Boilerplate
+
+An attempt to create a simple boilerplate grunt setup for my
+favorite wordpress starter theme Bones.
+
+******************************************************************/
+
+
+/******************************************************************
 Bones
 A Lightweight Wordpress Development Theme
 
