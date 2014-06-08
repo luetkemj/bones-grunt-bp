@@ -44,7 +44,8 @@ module.exports = function(grunt) {
           environment: 'development',
           relativeAssets: true,
           outputStyle: 'expanded',
-          raw: 'preferred_syntax = :scss\n'
+          raw: 'preferred_syntax = :scss\n',
+          require: 'susy'
         }
       }
     },
@@ -65,5 +66,5 @@ module.exports = function(grunt) {
   // Default task(s).
   grunt.registerTask('default', ['uglify'], 'compass','cmq');
   grunt.registerTask('lint', 'jshint');
-  
+
 };
