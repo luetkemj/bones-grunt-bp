@@ -51,7 +51,6 @@ module.exports = function(grunt) {
            
     jshint: {
       all: ['Gruntfile.js', 'library/js/scripts.js']
-      // myFiles: ['Gruntfile.js', 'library/js/*.js']
     }
 
 
@@ -64,6 +63,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify'], 'compass','cmq', ['jshint'] );
-
+  grunt.registerTask('default', ['uglify'], 'compass','cmq');
+  grunt.registerTask('lint', 'jshint');
+  
 };
