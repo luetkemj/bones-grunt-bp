@@ -1,5 +1,15 @@
 module.exports = function(grunt) {
 
+/*
+@TODO: reconfigure the scss folder and use this plugin to install it.https://www.npmjs.org/package/grunt-curl
+
+@TODO: Get jshint working proper so it will do what I need and actually lint everything
+
+@TODO: Get Susy running proper up in here
+
+@TODO: Get this repo setup outside of the bones theme. No reason to have it sit inside of a theme in the repo.
+*/
+
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -40,7 +50,8 @@ module.exports = function(grunt) {
     },
            
     jshint: {
-      all: ['Gruntfile.js', 'library/js/**/*.js']
+      all: ['Gruntfile.js', 'library/js/scripts.js']
+      // myFiles: ['Gruntfile.js', 'library/js/*.js']
     }
 
 
@@ -53,6 +64,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify'], 'compass','cmq', 'jshint');
+  grunt.registerTask('default', ['uglify'], 'compass','cmq', ['jshint'] );
 
 };
