@@ -10,5 +10,6 @@ favorite wordpress starter theme Bones.
 4. npm install
 
 ### Requirements
+* [compass](http://compass-style.org/)
 * [Susy](http://susydocs.oddbird.net/en/latest/install/)
 * [Breakpoint](http://breakpoint-sass.com/)
