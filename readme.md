@@ -4,13 +4,10 @@
 favorite wordpress starter theme Bones.
 
 ## Get Started
-Download [Bones](http://themble.com/bones/)
-
-Add Gruntfile.js and package.json to bones at root.
-
-cd to bones
-
-npm install
+1. Download [Bones](http://themble.com/bones/)
+2. Add Gruntfile.js and package.json to bones at root.
+3. cd to bones
+4. npm install
 
 ### Requirements
 * [Susy](http://susydocs.oddbird.net/en/latest/install/)
