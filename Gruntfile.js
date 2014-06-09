@@ -32,6 +32,7 @@ module.exports = function(grunt) {
       }
     },
 
+// susy and compass can be finicky together. If you have problems try this thread on stack overflow. http://stackoverflow.com/questions/22299466/cant-get-sass-compass-susy-installed-on-osx-due-to-version-conflict
     compass: {
       dist: {
         options: {
@@ -43,7 +44,7 @@ module.exports = function(grunt) {
           relativeAssets: true,
           outputStyle: 'expanded',
           raw: 'preferred_syntax = :scss\n',
-          require: 'susy'
+          require: ['susy','breakpoint']
         }
       }
     },

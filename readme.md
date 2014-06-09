@@ -11,3 +11,7 @@ Add Gruntfile.js and package.json to bones at root.
 cd to bones
 
 npm install
+
+### Requirements
+* [Susy](http://susydocs.oddbird.net/en/latest/install/)
+* [Breakpoint](http://breakpoint-sass.com/)
