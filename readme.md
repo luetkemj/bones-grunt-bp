@@ -10,10 +10,17 @@ favorite wordpress starter theme Bones.
 4. npm install
 5. grunt compass
 6. grunt
-7. add <script src="//localhost:35729/livereload.js"></script> to footer
+7. add to footer just before the closing body tag
+	<script src="//localhost:35729/livereload.js"></script> 
 8. ...
 
 ### Requirements
 * [compass](http://compass-style.org/)
 * [Susy](http://susydocs.oddbird.net/en/latest/install/)
 * [Breakpoint](http://breakpoint-sass.com/)
+
+
+### Planned
+* clean out some stuff I don't use or need to rewrite (the sass structure primarily) with https://www.npmjs.org/package/grunt-remove or  https://github.com/gruntjs/grunt-contrib-clean
+* rewrite and structure a better sass directory
+* pull it down with https://github.com/twolfson/grunt-curl or a contrib version of the same if I can find it
