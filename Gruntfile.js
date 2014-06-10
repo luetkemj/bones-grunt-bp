@@ -53,15 +53,20 @@ module.exports = function(grunt) {
       all: ['Gruntfile.js', 'library/js/scripts.js']
     },
 
+// @todo: get js running in livereload as well
     watch: {
-      scripts: {
-        files: ['**/*.js'],
-        tasks: ['jshint'],
-        options: {
-          spawn: true,
-        },
+      scss: {
+        files: ['library/scss/**/*.scss'],
+        tasks: ['compass:dist']
       },
-    },
+      css: {
+        files: ['library/css/**/*.css']
+      },
+      livereload: {
+        files: ['library/css/**/*.css'],
+        options: { livereload: true }
+      }
+    }
 
 
   });
