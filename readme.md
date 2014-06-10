@@ -11,7 +11,9 @@ favorite wordpress starter theme Bones.
 5. grunt compass
 6. grunt
 7. add to footer just before the closing body tag
+```	
 	<script src="//localhost:35729/livereload.js"></script> 
+```
 8. ...
 
 ### Requirements
